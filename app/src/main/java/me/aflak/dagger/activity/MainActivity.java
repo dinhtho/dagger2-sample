@@ -13,9 +13,12 @@ import me.aflak.dagger.model.ImageDownloader;
 import me.aflak.dagger.model.User;
 
 public class MainActivity extends AppCompatActivity {
-    @Inject ImageDownloader downloader;
-    @Inject User user;
+    @Inject
+    ImageDownloader downloader;
+    @Inject
+    User user;
     private static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 .activityModule(new ActivityModule())
                 .build()
                 .inject(this);
-        Log.i(TAG, "onCreate: "+user);
+        Log.i(TAG, "onCreate: " + user);
 
         ImageView imageView = findViewById(R.id.main_image);
         downloader.toImageView(imageView, "http://s2.quickmeme.com/img/a6/a69d84379a04cc6f56a58c1c9b8d0826ddd24c9e52644ac7a068705a7be1a6bb.jpg");
