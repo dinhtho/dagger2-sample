@@ -8,7 +8,9 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import me.aflak.dagger.model.ImageDownloader;
+import me.aflak.dagger.model.TestData;
 import me.aflak.dagger.model.User;
+import me.aflak.dagger.scope.ActivityScope;
 import me.aflak.dagger.scope.ApplicationScope;
 
 @Module
